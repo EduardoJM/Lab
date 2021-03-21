@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contained Absolute Element Demo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+        }
+        #container {
+            width: 80%;
+            height: 80%;
+            background: blue;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+        #floated {
+            position: absolute;
+            left: 150px;
+            top: 100px;
+            width: 400px;
+            height: 400px;
+            background: red;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="floated">
+        </div>
+    </div>
+    
+    
+    <script src="assets/ElementContainerConstraint.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function(){
+            var constraint = new ElementContainerConstraint(
+                document.getElementById('container'),
+                document.getElementById('floated'),
+                {},
+            );
+        });
+    </script>
+</body>
+</html>
