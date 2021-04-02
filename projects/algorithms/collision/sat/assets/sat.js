@@ -184,20 +184,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     render();
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
+    canvas.addEventListener('keydown', function(e) {
+        if (e.key.toLowerCase() === 'd') {
             polygons['polygon' + moving].offset(10, 0);
             render();
         }
-        if (e.key === 'ArrowLeft') {
+        if (e.key.toLowerCase() === 'a') {
             polygons['polygon' + moving].offset(-10, 0);
             render();
         }
-        if (e.key === 'ArrowDown') {
+        if (e.key.toLowerCase() === 's') {
             polygons['polygon' + moving].offset(0, 10);
             render();
         }
-        if (e.key === 'ArrowUp') {
+        if (e.key.toLowerCase() === 'w') {
             polygons['polygon' + moving].offset(0, -10);
             render();
         }

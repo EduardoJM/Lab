@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <!-- Google Icon Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- Theme Colors -->
+    <link rel="stylesheet" href="/assets/theme.css" />
+</head>
+
+<body class="omni-bg">
+    <header>
+        <ul id="slide-out" class="sidenav omni-sidenav">
+            <li><a href="/index.html">Home</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li class="bold">
+                        <a class="collapsible-header" tabindex="0">
+                            Algorithms
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class="subheader-li"><a class="subheader">Collision</a></li>
+                                <li>
+                                    <a href="/projects/algorithms/collision/sat/index.html">Separating Axis Theorem</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li class="bold">
+                        <a class="collapsible-header" tabindex="0">
+                            Ideas
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#">Dynamic Math Graph Ploting</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li class="bold">
+                        <a class="collapsible-header" tabindex="0">
+                            Math
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class="subheader-li"><a class="subheader">Statistics</a></li>
+                                <li>
+                                    <a href="#">Opinion Survey Simulator</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a id="sidenav-toggler" data-target="slide-out" class="sidenav-trigger omni-fg">
+            <i class="material-icons">menu</i>
+        </a>
+    </header>
+
+    <main>
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="page-footer omni-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Share Your Open Source World</h5>
+                    <p class="grey-text text-lighten-4">This is a little part of my Open Source World. See more in <a href="https://github.com/eduardoJM">GitHub</a>.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/eduardoJM">GitHub@EduardoJM</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/eduardoJM/lab">GitHub@EduardoJM/lab</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/edujso/">LinkedIn/in/edujso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Eduardo Oliveira
+            </div>
+        </div>
+    </footer>
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function init(selector, comp, opts) {
+            var elems = document.querySelectorAll(selector);
+            var instances = comp.init(elems, opts);
+            return instances;
+        }
+
+        init('.sidenav', M.Sidenav, {});
+        init('.materialboxed', M.Materialbox, {});
+        init('.collapsible', M.Collapsible, {});
+    </script>
+</body>
