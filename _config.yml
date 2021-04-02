@@ -1,2 +1,5 @@
 lang: "pt_BR"
 ssl: true
+baseurl: ""
+url: "https://eduardojm.github.io/Lab"
+github_url: "https://github.com/EduardoJM/Lab"
