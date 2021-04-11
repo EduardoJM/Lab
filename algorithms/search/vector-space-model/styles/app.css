@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+
+    height: 100vh;
+
+    display: flex;
+    padding: 50px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    flex: 1;
+
+    padding: 20px;
+}
+
+#search-field {
+    font-size: 20px;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    background: #222;
+    color: #FFF;
+
+    font-family: 'Roboto', sans-serif;
+
+    margin-bottom: 50px;
+}
+#search-field::placeholder {
+    color: #CCC;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#results {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#results > div {
+    border-bottom: 1px solid #222;
+}
+#results > div:last-child {
+    border-bottom: none;
+}
+
+#results .music-result {
+    padding: 20px;
+
+    display: flex;
+
+    cursor: pointer;
+}
+
+#results .music-result .icon {
+    width: 80px;
+    height: 80px;
+    background: #222;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 10px;
+    color: #CCC;
+}
+
+#results .music-result .infos {
+    flex: 1;
+}
+
+#results .music-result .infos .title {
+    font-size: 30px;
+    color: #CCC;
+    margin-bottom: 10px;
+}
+
+#results .music-result .infos .artist {
+    font-size: 18px;
+    color: #CCC;
+}
+
+#results .music-lyrics {
+    color: #CCC;
+    font-size: 18px;
+    line-height: 1.5em;
+
+    transition: all 0.5s ease;
+
+    height: 0px;
+    padding: 0px;
+    opacity: 0;
+
+    overflow: hidden;
+}
+
+#results .music-lyrics.visible {
+    height: auto;
+    padding: 20px;
+    opacity: 1;
+}
+
+#results .music-lyrics p {
+    margin-bottom: 20px;
+}
